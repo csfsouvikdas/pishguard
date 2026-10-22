@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{font:14px system-ui,sans-serif;padding:16px;min-width:340px}label{display:block;margin:10px 0}input[type=text]{width:100%;padding:6px}
+button{padding:8px 14px;border:0;border-radius:8px;background:#2563eb;color:#fff}</style></head><body>
+<h3>PhishGuard settings</h3>
+<label>API URL<input type="text" id="apiUrl" placeholder="https://your-app.onrender.com"></label>
+<label><input type="checkbox" id="serverChecks"> Send <i>suspicious</i> links to the API for a second opinion</label>
+<label><input type="checkbox" id="warnOnClick"> Show a warning before opening dangerous links</label>
+<button id="save">Save</button> <span id="msg"></span><script src="options.js"></script></body></html>

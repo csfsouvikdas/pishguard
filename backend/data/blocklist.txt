@@ -1,0 +1,2 @@
+# One domain per line. Add known phishing domains here (or sync from OpenPhish/PhishTank).
+example-phish.test

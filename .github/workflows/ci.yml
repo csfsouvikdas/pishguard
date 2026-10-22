@@ -1,0 +1,15 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: cd backend && npm install && npm test
+      - run: diff shared/detector.js extension/detector.js
+      - name: Package extension
+        run: cd extension && zip -r ../phishguard-extension.zip .
+      - uses: actions/upload-artifact@v4
+        with: { name: extension, path: phishguard-extension.zip }

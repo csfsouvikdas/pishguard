@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports: ["3000:3000"]
+    environment:
+      - SAFE_BROWSING_KEY=${SAFE_BROWSING_KEY:-}
+      - DATA_DIR=/data
+    volumes: ["pgdata:/data"]
+    restart: unless-stopped
+volumes:
+  pgdata:

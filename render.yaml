@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: phishguard-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: SAFE_BROWSING_KEY
+        sync: false
